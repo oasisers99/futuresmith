@@ -1,0 +1,39 @@
+/***********************
+ * Page Banner CSS
+ * Responsible for Title / Navigation
+ ***********************/
+
+.white-hover:hover {
+  color: white !important;
+}
+
+/***********************
+ * Main Content CSS
+ * Layouts Main Content
+ ***********************/
+
+#main-content-row {
+  margin-bottom: 50px;
+}
+
+.content-row {
+  padding: 2% 15% 2% 15%;
+}
+
+.slick-row {
+  padding: 0 5%;
+}
+
+.header-row {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 1.5rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.header-row-pb {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 1.5rem !important;
+  padding-bottom: 0 !important;
+}

@@ -1,0 +1,122 @@
+/*======================
+ * MEDIA QUERIES
+ ======================*/
+
+@media (min-width: 567px) and (max-width: 991px) {
+  .header-row {
+    padding-bottom: 0 !important;
+  }
+}
+
+/***********************
+ * CARD RESPONSIVENESS
+ * LINK: https://www.codeply.com/go/Zu7Cc9CD9Y/bootstrap-4-responsive-card-deck-(css)
+ * Thanks Skelly <3
+ ***********************/
+
+/* responsively enforce wrapping */
+.card-deck-projects span, .card-deck-tribe span {
+  display: none;
+}
+
+.card-projects, .card-tribe {
+  margin-bottom: 15px !important;
+}
+
+/***********************************
+ * CARD DECK NORMAL (PROJECT SEARCH)
+ */
+
+/* xlg+ */
+@media (min-width:1960px){
+  .card-deck-projects span:nth-of-type(4n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* lg+ */
+@media (min-width:1200px) and (max-width: 1959px) {
+  .card-deck-projects span:nth-of-type(3n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* md to lg */
+@media (min-width:992px) and (max-width: 1199px) {
+  .card-deck-projects span:nth-of-type(2n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* sm to md */
+@media (min-width:768px) and (max-width: 991px) {
+  .card-deck-projects span:nth-of-type(2n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* xs to sm */
+@media (min-width: 576px) and (max-width: 767px) {
+  .card-deck-projects span:nth-of-type(1n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/********************************
+ * CARD DECK TRIBE (TRIBE SEARCH)
+ */
+
+/* xlg+ */
+@media (min-width:1960px){
+  .card-deck-tribe span:nth-of-type(5n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* lg+ */
+@media (min-width:1200px) and (max-width: 1959px) {
+  .card-deck-tribe span:nth-of-type(3n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* md to lg */
+@media (min-width:992px) and (max-width: 1199px) {
+  .card-deck-tribe span:nth-of-type(2n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* sm to md */
+@media (min-width:768px) and (max-width: 991px) {
+  .card-deck-tribe span:nth-of-type(2n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* xs to sm */
+@media (min-width: 576px) and (max-width: 767px) {
+  .card-deck-tribe span:nth-of-type(1n) {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+}

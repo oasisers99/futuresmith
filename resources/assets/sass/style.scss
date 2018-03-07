@@ -1,0 +1,136 @@
+/*****************************************************
+ * Style CSS
+ * Created For: Future Smith
+ * Author: Filip Blazevski
+ * Contact: filip@futuresmith.com.au
+ ****************************************************/
+
+/****************************************************
+ * Custom Font Theme
+ ****************************************************/
+@import "fonts";
+
+/*****************************************************
+ * Theme Colour Settings
+ * Sets the theme colours we want to prepare for overwriting
+ */
+$primary: #2e7cfe;
+$secondary: #1dc9b0;
+
+
+/*****************************************************
+ * Colour Settings
+ * Sets the Colours we want to prepare for overwriting
+ */
+$red: #ed4769;
+$gray-dark: #242924;
+$gray: #f2f2f2;
+$green: #1dc9b0;
+$blue: #2e7cfe;
+
+/*****************************************************
+ * Colour Overrides
+ * Overrides the colours we want to use
+ */
+$colors: (
+  "blue": $blue,
+  "indigo": var(--indigo),
+  "purple": var(--purple),
+  "pink": var(--pink),
+  "red": $red,
+  "orange": var(--orange),
+  "yellow": var(--yellow),
+  "green": $green,
+  "teal": var(--teal),
+  "cyan": var(--cyan),
+  "white": var(--white),
+  "gray": $gray,
+  "gray-dark": $gray-dark
+) !default;
+
+/*****************************************************
+ * Theme Colour Overrides
+ * Overrides the theme colours we want to use
+ */
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary
+) !default
+
+/*****************************************************
+ * Create Custom Classes
+ * Creates theme-(color) for both
+ * colours and theme groups
+ */
+
+// Theme Colours
+@each $color, $value in $theme-colors {
+  .theme-#{$color} {
+    color: $value !important;
+  }
+}
+
+// Theme Colours
+@each $color, $value in $theme-colors {
+  .bg-theme-#{$color} {
+    background-color: $value !important;
+  }
+}
+
+// Normal Colours
+@each $color, $value in $colors {
+  .bg-theme-#{$color} {
+    background-color: $value !important;
+  }
+}
+
+// Normal Colours
+@each $color, $value in $colors {
+  .theme-#{$color} {
+    color: $value !important;
+  }
+}
+/****************************************************
+ * Import All of Bootstrap for use
+ ****************************************************/
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+/****************************************************
+ * Override Values on Bootstrap
+ * Overrides default bootstrap with what we want
+ * Set Default Fonts
+****************************************************/
+
+// Title Font
+h1,h2,h3,h4,h5 {
+  font-family: 'Lato', sans-serif;
+}
+
+// Body Font
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+// Paragraph Font
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+small {
+  color: $red;
+}
+
+/****************************************************
+ * Navigation
+ ****************************************************/
+@import "navigation";
+
+/****************************************************
+ * Media Queries
+ ****************************************************/
+@import "mediaqueries";
+
+/****************************************************
+ * Extras
+ ****************************************************/
+@import "extras";

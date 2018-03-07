@@ -1,0 +1,89 @@
+<script>
+    $('document').ready(function(){
+        //getFrontTribes();
+        /**
+         *  Retrieve tribes
+         *
+         */
+        function getFrontTribes(){
+            $.ajax({
+                method: "GET",
+                url: '{{ Route("front.getFrontTribes") }}'
+            })
+            .done(function(tribes){
+                display(tribes);
+            });
+        }
+
+        /**
+         * Display results in the Tribes search section
+         *
+         * @param tribes
+         */
+        function display(tribes){
+            if(tribes.length == 0){
+                $("#search-message").text("Result not found.")
+                return;
+            }
+        }
+    });
+</script>
+
+<!--
+<div class="fh5co-blog-style-1 tribe-search" id="searchTribe">
+    <div class="container">
+        <div class="row p-b">
+            @foreach ($tribes as $tribe)
+            <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 wow fadeInLeft">
+                <div class="fh5co-post wow fadeInLeft"  data-wow-duration="1s" data-wow-delay="1.1s">
+                    <div class="fh5co-post-image">
+                        <div class="fh5co-overlay"></div>
+                        <div class="fh5co-category"><a href="#">{{$tribe->topic1}}</a></div>
+                        <img src="images/img_same_dimension_2.jpg" alt="Image" class="img-responsive">
+                    </div>
+                    <div class="fh5co-post-text">
+                        <h3><a href="{{ route('tribe.main', ["tribe_id" => $tribe->id]) }}">{{$tribe->name}}</a></h3>
+                        <p>{{ str_limit($tribe->summary, 200) }}</p>
+                    </div>
+                    <div class="fh5co-post-meta">
+                        <a href="#"><i class="icon-group"></i> {{$tribe->member_no}}</a>
+                        <a href="#"><i class="icon-map2"></i>{{$tribe->region}}, {{$tribe->country}}</a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
+    </div>
+</div>
+-->
+
+<!-- Participate -->
+<div class="row slick-row tribe-search" id="searchTribe">
+   <div class="col-12 text-center">
+       <h2 class="font-weight-bold">Participate Now</h2>
+       <p>You can join one of our many ongoing projects</p>
+   </div>
+   <div class="col-12">
+       <div class="slick-projects card-group card-deck">
+           @foreach ($tribes as $tribe)
+               <div class="card">
+                   <img class="card-img-top" src="images/img_same_dimension_2.jpg" alt="Card image cap" width="100%" height="100%"/>
+                   <div class="card-footer align-self-center text-center w-100">
+                       <h3>{{$tribe->name}}</h3>
+                       <br/>
+                       <a href="{{ route('tribe.main', ["tribe_id" => $tribe->id]) }}" class="btn btn-outline-primary">Learn More</a>
+                   </div>
+               </div>
+           @endforeach
+       </div>
+   </div>
+</div>
+<!-- /. Participate -->
+<div class="row pt-3 pb-3">
+    <div class="col-12">
+        <div class="text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+            <a href="{{ route('tribe.searchTribeFull') }}" class="btn btn-primary btn-lg">Find More Tribes</a>
+        </div>
+    </div>
+</div>

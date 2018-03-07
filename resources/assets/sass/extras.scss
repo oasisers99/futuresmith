@@ -1,0 +1,143 @@
+
+.hover-white:hover {
+  color: white !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.no-bg-outline {
+  background-color: transparent;
+  border: none;
+}
+
+#categorySelectionInput {
+  margin: 5px 0;
+}
+
+/************************
+ * Extra Code for Card Deck
+ * Makes Images look nicer
+ * Doesn't stretch Images
+ ***********************/
+.card-img-top {
+  object-fit: cover;
+  align-content: center;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 180px;
+  overflow-y: hidden;
+  display: inline !important;
+}
+
+.card-body {
+    min-height: 110px;
+    height: 100%;
+    max-height: 130px;
+}
+
+.row.equal-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.equal-height > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    flex: 1;
+}
+
+/******************************
+ * Pill Overrides
+ * We used more rounded buttons
+ ******************************/
+.rounded-button-blue {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  min-width: 40px;
+  margin-right: 10px;
+}
+
+.rounded-button-blue:hover {
+  background-color: rgb(46,124,254);
+}
+
+.rounded-button-grey {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  min-width: 40px;
+  margin-right: 10px;
+}
+
+.rounded-button-grey:hover {
+  background-color: #787878;
+  outline-color: #787878;
+  border-color: #787878;
+}
+
+/***********************
+ * Card Deck
+ * Overrides links
+ * Provides links for images only
+ ***********************/
+.card > a {
+  color: rgb(36,41,36);
+}
+
+.card > a:hover {
+  text-decoration: none;
+}
+
+
+.card-tribe {
+  background-color: transparent;
+  padding: 25px 20px;
+  outline: none;
+  width: auto;
+  min-width: 200px;
+  //max-width: 250px;
+}
+
+.tribe-link {
+  text-align: center;
+}
+
+.tribe-footer {
+  padding: 0 1.25rem;
+  background-color: transparent;
+  border-top: none;
+}
+
+
+
+/*
+ * Code Provided by Stackoverflow
+ * Thanks to Sangari
+ * https://stackoverflow.com/questions/26754787/center-text-and-container-inside-a-circle
+ * http://jsfiddle.net/6cygbd37/1/
+ */
+
+.block {
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: -10px;
+  right: -20px;
+}
+.circle {
+  border-radius: 80px;
+  height: 80px;
+  font-weight: bold;
+  width: 80px;
+  display: table;
+  border: 1px solid black;
+}
+.circle p {
+  vertical-align: middle;
+  display: table-cell;
+}
